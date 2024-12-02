@@ -51,7 +51,7 @@ class HHomeController extends Controller
             'message' => 'required|string',
         ]);
 
-        $feedback = new Inbox;
+        $feedback = new Inbox();
         $feedback->name = $request->name;
         $feedback->email = $request->email;
         $feedback->subject = $request->subject;

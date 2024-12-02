@@ -694,6 +694,10 @@
 
     </section><!-- /Pricing Section -->
     <!-- Features Cards Section -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Show Room</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
     <section id="ShowRoom" class="features-cards section py-5">
         <div class="container">
             <div class="row gy-4">
@@ -801,6 +805,7 @@
               @foreach ($contacts as $item)
               <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
 
+
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
@@ -836,7 +841,34 @@
               @endforeach
             </div>
           </div>
-
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
        <!-- The form in your 'fronts.blade.php' file -->
 <div class="col-lg-7">
     <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
@@ -850,7 +882,7 @@
             </div>
         @endif
 
-        <form action="{{ route('contact.store') }}" method="POST" class="php-email-form form-control" data-aos="fade-up" data-aos-delay="200">
+        <form action="{{ url('contact') }}" method="POST" class="form-control" data-aos="fade-up" data-aos-delay="200">
             @csrf
             <div class="row gy-4">
                 <div class="col-md-6">
@@ -872,7 +904,7 @@
         </form>
     </div>
 </div>
-<script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('.php-email-form');
 
@@ -912,13 +944,13 @@
             console.error('Form not found');
         }
     });
-</script>
+</script> --}}
       
 </div>
       </div>
 
     </section><!-- /Contact Section -->
-<!-- Add the validation script at the bottom -->
+
 
   </main>
 

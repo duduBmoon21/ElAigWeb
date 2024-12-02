@@ -27,7 +27,7 @@ use App\Http\Controllers\Auth\ChangePasswordController;
 //     return view('welcome');
 // });
 
-// Route::get('/', [FrontendController::class, 'index']);
+Route::get('/du', [FrontendController::class, 'index']);
 
 Route::get('/', [HHomeController::class, 'index']);
 
