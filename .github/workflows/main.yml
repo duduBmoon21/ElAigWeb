@@ -19,7 +19,7 @@ jobs:
     - name: Install PHP and Composer
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.0.2' # Adjust to match your project's PHP version
+        php-version: '^7.3|^8.0' # Adjust to match your project's PHP version
         tools: composer
 
     # Install PHP dependencies
