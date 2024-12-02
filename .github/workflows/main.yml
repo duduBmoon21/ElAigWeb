@@ -19,12 +19,12 @@ jobs:
     - name: Install PHP and Composer
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.0' # Adjust to match your project's PHP version
+        php-version: '8.2' # Adjust to match your project's PHP version
         tools: composer
 
     # Install PHP dependencies
     - name: Install PHP Dependencies
-      run: composer update # No need for working-directory since composer.json is in the root
+      run: composer install # No need for working-directory since composer.json is in the root
 
     # Deploy using FTP
     - name: FTP-Deploy-Action
